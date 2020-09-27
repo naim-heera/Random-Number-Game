@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: border-box;
+}
+
+body {
+  background: #1aa6b7;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  min-height: 30vh;
+  min-width: 100vw;
+}
+
+.header-title {
+  color: white;
+  font-family: Poppins;
+  font-size: clamp(1.5em, 2.5vw, 2em);
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 1rem;
+}
+
+.header-desc {
+  color: white;
+  font-family: Poppins;
+  font-size: clamp(0.9em, 1em, 1.5em);
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 1rem 1rem 1rem;
+}
+
+
+label {
+  color: white;
+  font-family: Poppins;
+  font-size: clamp(1em, 2.5vw, 2em);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 1rem auto;
+}
+
+.field {
+  width: clamp(40vw, 50vw, 60vw);
+  margin: auto;
+  height: 1.8em;
+  border-radius: 0.5em;
+  border: none;
+
+}
+
+.field:focus {
+  outline: none;
+}
+
+.field[type=number] {
+  color: blue;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  text-align: center;
+
+}
+
+.submit {
+  width: clamp(30vw, 40vw, 50vw);
+  margin: 1rem auto;
+  height: 2.4em;
+  border-radius: 0.5em;
+  border: none;
+  color: white;
+  background: #5e60ce;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.1em;
+
+}
+
+.guess {
+  color: white;
+  font-family: Poppins;
+  font-size: clamp(0.9em, 2.5vw, 2em);
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0.7em;
+}
+
+.finalResult {
+  color: white;
+  font-family: Poppins;
+  font-size: clamp(0.9em, 2.5vw, 2em);
+  font-style: bold;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.rating {
+  color: white;
+  font-size: clamp(0.9em, 2.5vw, 2em);
+  font-style: bold;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.reset-class {
+  width: 30vw;
+  height: 1.5em;
+  border-radius: 0.5em;
+  border: none;
+  color: white;
+  background: #e63946;
+  font-size: clamp(0.9em, 2.5vw, 2em);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.retarded {
+  color: #ffff3f;
+  width: 20vw;
+  font-size: clamp(0.9em, 2.5vw, 2em);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin: auto;
+
+}
