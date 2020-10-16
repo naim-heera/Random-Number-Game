@@ -6,7 +6,7 @@ const rating = document.querySelector('.rating');
 const submit = document.querySelector('.submit');
 const field = document.querySelector('.field');
 const audio = document.querySelector('audio');
-console.log(audio);
+const retard = document.getElementById('retard');
 let guessCount = 1;
 let resetButton;
 
@@ -28,9 +28,10 @@ function checkGuess() {
 
     setGameover1();
   } else if (guessCount === 10) {
-    finalResult.textContent = "Oh no! You are better thah this!"
+    finalResult.textContent = "I think, you are completely retarded!"
     guess.textContent = "";
     setGameover();
+    retard.play();
   } else {
 
     if (userGuess < randomNumber) {
@@ -98,4 +99,3 @@ function resetGame() {
   field.focus();
   randomNumber = Math.floor(Math.random() * 100) + 1;
 }
-
