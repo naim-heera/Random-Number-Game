@@ -4,6 +4,8 @@ const finalResult = document.querySelector('.finalResult');
 const rating = document.querySelector('.rating');
 const submit = document.querySelector('.submit');
 const field = document.querySelector('.field');
+const audio = document.querySelector('audio');
+console.log(audio);
 let guessCount = 1;
 let resetButton;
 
@@ -11,7 +13,7 @@ let resetButton;
 function checkGuess() {
   let userGuess = Number(field.value);
   if (guessCount === 1) {
-    guess.textContent = "Previous guess: ";
+    guess.textContent = "Previous guesses: ";
   }
   guess.textContent += userGuess + "," + " ";
 
@@ -19,6 +21,7 @@ function checkGuess() {
     finalResult.textContent = "Congratulations, you are a genius!"
     rating.textContent = "";
     guess.textContent = "";
+
     setGameover1();
   } else if (guessCount === 10) {
     finalResult.textContent = "Oh no! You are better thah this!"
@@ -52,6 +55,8 @@ function setGameover() {
   resetParas.appendChild(resetButton);
   resetButton.classList.add("reset-class");
   resetButton.addEventListener("click", resetGame);
+  audio.play();
+
 }
 
 function setGameover1() {
@@ -83,3 +88,4 @@ function resetGame() {
   field.focus();
   randomNumber = Math.floor(Math.random() * 100) + 1;
 }
+
