@@ -15,9 +15,10 @@ function checkGuess() {
   let userGuess = Number(field.value);
   if (guessCount === 1) {
     guess.textContent = "Previous guesses: ";
+    hideDesc();
   }
   guess.textContent += userGuess + "," + " ";
-  desc.style.display = "none";
+
 
   if (userGuess === randomNumber) {
     finalResult.textContent = "Congratulations, you are a genius!"
@@ -47,6 +48,12 @@ function checkGuess() {
 }
 
 submit.addEventListener("click", checkGuess);
+field.addEventListener("focus", hideDesc);
+
+function hideDesc() {
+  desc.style.display = "none";
+
+}
 
 function setGameover() {
   field.disabled = true;
