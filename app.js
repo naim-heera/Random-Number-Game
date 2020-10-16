@@ -4,8 +4,6 @@ const finalResult = document.querySelector('.finalResult');
 const rating = document.querySelector('.rating');
 const submit = document.querySelector('.submit');
 const field = document.querySelector('.field');
-const audio = document.querySelector('audio');
-console.log(audio);
 let guessCount = 1;
 let resetButton;
 
@@ -55,7 +53,7 @@ function setGameover() {
   resetParas.appendChild(resetButton);
   resetButton.classList.add("reset-class");
   resetButton.addEventListener("click", resetGame);
-  audio.play();
+
 
 }
 
