@@ -1,9 +1,12 @@
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 const guess = document.querySelector('.guess');
 const finalResult = document.querySelector('.finalResult');
+const desc = document.getElementById('desc');
 const rating = document.querySelector('.rating');
 const submit = document.querySelector('.submit');
 const field = document.querySelector('.field');
+const audio = document.querySelector('audio');
+console.log(audio);
 let guessCount = 1;
 let resetButton;
 
@@ -14,11 +17,13 @@ function checkGuess() {
     guess.textContent = "Previous guesses: ";
   }
   guess.textContent += userGuess + "," + " ";
+  desc.style.display = "none";
 
   if (userGuess === randomNumber) {
     finalResult.textContent = "Congratulations, you are a genius!"
     rating.textContent = "";
     guess.textContent = "";
+    audio.play();
 
     setGameover1();
   } else if (guessCount === 10) {
