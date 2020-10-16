@@ -11,7 +11,7 @@ body {
   background: #1aa6b7;
   overflow: hidden;
   position: absolute;
-  min-height: 100vh;
+  min-height: 70vh;
   min-width: 100vw;
   display: flex;
   flex-direction: column;
